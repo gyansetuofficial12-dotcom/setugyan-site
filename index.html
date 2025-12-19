@@ -1659,7 +1659,7 @@
         // Supabase initialization
         const supabaseUrl = 'https://fanufzmbbuupdlvlitvn.supabase.co';
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhbnVmem1iYnV1cGRsdmxpdHZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwODI3MzksImV4cCI6MjA3MzY1ODczOX0.oxEbq-e1O9OENm_oo11Thgs6ebtYNGGGJzA9uJaDjdQ';
-        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+        window._supabase =   window._supabase ||   window.supabase.createClient(supabaseUrl, supabaseKey);  const supabase = window._supabase;
         
         // Supabase Storage bucket name
         const HOMEWORK_BUCKET = 'homework';
